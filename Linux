@@ -1,1 +1,36 @@
+Linux is an opensource Platform
+Main components of Linux
+  1. Kernal  also called OS
+  2. shell 
+Kernal is the heart of the OS, the kernel interacts with the hardware
+shell takes the inputs from the user and passes them to the kernel
+OS-> os is a bridge between the user and the hardware
+UNIX: is not portable and costly need to buy both OS and hardware  so it's costly, and tightly coupled with hardware
+Kernel + Linux = Linux, Inventor Linus Torvals
+Linux is free and open-source software, it's portable and has no hardware locking 
+96% of servers are running in the world on Linux, even supercomputers also.
+why Linux is good than any OS :
+  #. less cost & More performance and secured 
+  #. consume less memory and more speed
+  #. secured - originally from unix Principles
+  #. More community support and & Very stable (Linux can run without restarting  and without doing any updates run  for years)
+  #. Consume low Power
+Linux OS or Kernel.?
+Linux is a kernel and opensource code kernel with a shell
+
+added more utilities such as Ubuntu, Centos, Fedora, Redhat and etc
+
+Linux + Shell+ graphics = Android, Ubuntu, Desktop
+Linux + Shell + some Utilities = Server
+
+What are SSH keys .?
+SSH keys are 2 types 
+  1. Public key -> keep inside the server 
+  2. Private key -> Who ever wants to access the server they have the private key 
+
+How to generate SSH key 
+command is 
+ssh-keygen -f <filename>  -> it will generate the private key
+
+
 
