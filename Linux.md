@@ -64,7 +64,7 @@ cd [/path/to/folder]
 
 $ - normal User
 
- #-Root user
+ sudo su - Root User
 
 pwd - present working Directory
 
