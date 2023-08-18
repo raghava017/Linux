@@ -40,9 +40,10 @@ SSH keys are 2 types
 How to generate SSH key 
 command is 
 ssh-keygen -f <filename>  -> it will generate the private key
-===================================================================
+
 ### Commands ###
-===================================================================
+
+
 Any command in Linux syntax is. Based on the command behavior we can choose options and inputs.
 
 [command-name] [options] [inputs]
@@ -63,7 +64,7 @@ cd [/path/to/folder]
 
 $ - normal User
 
-# - Root user
+ - Root user
 
 pwd - present working Directory
 
@@ -133,9 +134,10 @@ To get the source and show the content in the terminal.
 
 curl [URL]
 
-===================================================================
+
 ### Exit status ###
-===================================================================
+
+
 exit status is very important in Linux. We use this to know whether the result is success or failure. Linux store the result in a special variable
 $?
 echo $?
@@ -143,9 +145,11 @@ echo $?
 Success - 0
 
 Failure - Other than 0 any number
-===================================================================
+
+
 ### Permissions and Ownership   ###
-===================================================================
+
+
 We have 3 types of ownership.
 
 User: He is the one who created the file/folder. Denotes by u
@@ -155,13 +159,13 @@ Group: a group of users the file belongs to. Denotes by g
 Other: Anyone other than the user and group. Denotes by o
 
 3 types of Permissions
-===================================================================
+
 Read: denotes by number 4
 
 Write: Denotes by number 2
 
 Execute: Denotes by number 1
-===================================================================
+
 -rw-rw-r-- 1 ec2-user ec2-user  1483 May 24 13:58 eks-client.sh
 
 The above line has a total of 10 characters. The first character shows it is file(-)
