@@ -1,7 +1,9 @@
 Linux is an opensource Platform
 Main components of Linux
   1. Kernal  also called OS
-  2. shell 
+  2. shell
+  3. Hardware
+  4. Applications
 Kernal is the heart of the OS, the kernel interacts with the hardware
 shell takes the inputs from the user and passes them to the kernel
 OS-> os is a bridge between the user and the hardware
