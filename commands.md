@@ -144,3 +144,127 @@ To get the source and show the content in terminal.
 ```
 curl [URL]
 ```
+
+
+
+# System Information #
+date : shows the  current date and time
+
+cal : shows this month's calender
+
+uptime : Show Current Uptime
+
+w : display who is On line
+
+whoami : who you are logged in as 
+
+finger user : Display information about user
+
+uname -a : Shows kernal Information
+
+cat /proc/cpuinfo  : CPU information
+
+cat /proc/meminfo  : memory information
+
+man command : shows the manual for command 
+
+df : shows the disk usage 
+
+du : shows the directory space usage
+
+free : show the memory and swap usage 
+
+whereis app : shows the possible locations of app
+
+which app : shows which applications will be run by default
+
+# Process management #
+ps : To display the current working Process
+
+top : Display the running process
+
+kill PID : kill the process with given PID 
+
+PID means Process ID
+
+Killall proc : kill all the process named proc
+
+pkill pattern : will kill all process matching the pattern
+
+bg : List stopped or background jobs, resume a stopped jon in the background
+
+fg : Brings the most recent job to foreground
+
+fg n : Brings job n to the foreground
+
+# Searching Commands #
+
+grep pattern files : search file pattern in file
+
+grep -r pattern dir : search resursively for pattern in dir 
+
+command | grep pattern : search pattern in the output of a command 
+
+locate file : find all instances of file 
+
+find . -name : filename 
+
+search in the current directory (represented by a period) and below it, for files and directories with names starting with file pattern
+
+pgrep pattern : searches for all the named process, that matches with the pattern and, by default, returns their ID
+
+# File Permissions #
+chmod octal file 
+
+change the permission of file to octal,which can be found separately for user, group,world by adding 
+. 4-read (r)
+. 2-write (w)
+. 1-execute (x)
+
+
+# Network #
+
+ping host : Ping host and output the result
+
+whois domain : Get whois information for domains
+
+dig domain : Get DNS information for domain
+
+dig -x host : Reverse lookup host
+
+wget file : Download the file 
+
+wget -c file : continue a stopped download 
+
+# Compression #
+tar cf file.tar file : Create tar named file.tar containg file
+
+tar xf file.tar : Extract the files from file.tar
+
+tar czf file.tar.gz files : Creates a tar with Gzip compression
+
+tar xzf file.tar.gz : Extract atar using Gzip
+
+tar cjf file.tar.bz2 : Extract a tar using Bzip2
+
+gzip file : Compress file and renames it to file.gz
+
+gzip -d file.gz : Decompresses file.gz back to file
+
+
+# Shortcuts #
+ctrl+c  : Halts the current command
+
+ctrl+z : stops the current command, resume with fg in the foreground or bg in the background
+
+ctrl+d : logout the current session, similar to exit
+
+ctrl+w : Erases the one word in the current line 
+
+ctrl+u : erasses the whole line 
+
+ctrl+r : Type to bring up a recent command 
+
+!! : Repeats the last command 
+
+exit : Logout the current session 
