@@ -349,3 +349,29 @@ ex: userdel ram
 groupdel <groupname>
 
 ex: groupdel devops
+
+# Package Management #
+yum ----> yellow dog utility manager  or Yellowdog Updater, Modified (yum Package)
+
+apt ----> Advanced Package Tool
+rpm ----> redhat package management
+
+yum can understand the dependency and it will automatically install required dependent packages
+
+command for view the list of installed packages
+
+yum list installed  ----> show all the installed packages
+
+yum list installed | wc -l      ----> will display the count of installed packages
+
+yum list all  ----> it will show all the availabe packages through this repos 
+
+yum list all | wc -l   ---->it will show all the availabe packages  count 
+
+yum update -y ----> update all the packages 
+
+yum list available   -----> all-installed 
+
+yum list available | wc -l  ----> will show count of all-installed packages 
+
+yum remove nginx  ----> will remove the nginx package 
