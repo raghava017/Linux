@@ -145,3 +145,204 @@ echo $?
 Success - 0
 
 Failure - Other than 0 any number
+
+
+### Permissions and Ownership   ###
+
+
+We have 3 types of ownership.
+
+User: He is the one who created the file/folder. Denotes by u
+
+Group: a group of users the file belongs to. Denotes by g
+
+Other: Anyone other than the user and group. Denotes by o
+
+3 types of Permissions
+
+Read: denotes by number 4
+
+Write: Denotes by number 2
+
+Execute: Denotes by number 1
+
+-rw-rw-r-- 1 ec2-user ec2-user  1483 May 24 13:58 eks-client.sh
+
+The above line has a total of 10 characters. The first character shows it is file(-)
+The next 3 characters denote the permission of the user.
+The next 3 characters denotes the permission of the group
+The next 3 characters denote permission of other
+
+So the user has read and write access.
+Group has read and write access.
+others have only write access.
+
+If we want to add execute permission to everyone.
+
+chmod ugo+x [file-name]
+
+If we want to add write permission only to user and group.
+
+chmod ug+w [file-name]
+
+If we want to remove execute access to all.
+
+chmod ugo-x [file-name]
+
+We can use letters also. R+W = 4+2 =6 R+W+X = 4+2+1 = 7
+
+The below line denotes read access to the user and no access to the group and others.
+
+chmod 400 [file-name]
+
+# System Information #
+date : shows the  current date and time
+
+cal : shows this month's calender
+
+uptime : Show Current Uptime
+
+w : display who is On line
+
+whoami : who you are logged in as 
+
+finger user : Display information about user
+
+uname -a : Shows kernal Information
+
+cat /proc/cpuinfo  : CPU information
+
+cat /proc/meminfo  : memory information
+
+man command : shows the manual for command 
+
+df : shows the disk usage 
+
+du : shows the directory space usage
+
+free : show the memory and swap usage 
+
+whereis app : shows the possible locations of app
+
+which app : shows which applications will be run by default
+
+# Process management #
+ps : To display the current working Process
+
+top : Display the running process
+
+kill PID : kill the process with given PID 
+
+PID means Process ID
+
+Killall proc : kill all the process named proc
+
+pkill pattern : will kill all process matching the pattern
+
+bg : List stopped or background jobs, resume a stopped jon in the background
+
+fg : Brings the most recent job to foreground
+
+fg n : Brings job n to the foreground
+
+# Searching Commands #
+
+grep pattern files : search file pattern in file
+
+grep -r pattern dir : search resursively for pattern in dir 
+
+command | grep pattern : search pattern in the output of a command 
+
+locate file : find all instances of file 
+
+find . -name : filename 
+
+search in the current directory (represented by a period) and below it, for files and directories with names starting with file pattern
+
+pgrep pattern : searches for all the named process, that matches with the pattern and, by default, returns their ID
+
+# File Permissions #
+chmod octal file 
+
+change the permission of file to octal,which can be found separately for user, group,world by adding 
+. 4-read (r)
+. 2-write (w)
+. 1-execute (x)
+
+
+# Network #
+
+ping host : Ping host and output the result
+
+whois domain : Get whois information for domains
+
+dig domain : Get DNS information for domain
+
+dig -x host : Reverse lookup host
+
+wget file : Download the file 
+
+wget -c file : continue a stopped download 
+
+# Compression #
+tar cf file.tar file : Create tar named file.tar containg file
+
+tar xf file.tar : Extract the files from file.tar
+
+tar czf file.tar.gz files : Creates a tar with Gzip compression
+
+tar xzf file.tar.gz : Extract atar using Gzip
+
+tar cjf file.tar.bz2 : Extract a tar using Bzip2
+
+gzip file : Compress file and renames it to file.gz
+
+gzip -d file.gz : Decompresses file.gz back to file
+
+
+# Shortcuts #
+ctrl+c  : Halts the current command
+
+ctrl+z : stops the current command, resume with fg in the foreground or bg in the background
+
+ctrl+d : logout the current session, similar to exit
+
+ctrl+w : Erases the one word in the current line 
+
+ctrl+u : erasses the whole line 
+
+ctrl+r : Type to bring up a recent command 
+
+!! : Repeats the last command 
+
+exit : Logout the current session 
+
+# User management#
+useradd <username>  ---->
+
+# Package Management #
+yum ----> yellow dog utility manager  or Yellowdog Updater, Modified (yum Package)
+
+apt ----> Advanced Package Tool
+rpm ----> redhat package management
+
+yum can understand the dependency and it will automatically install required dependent packages
+
+command for view the list of installed packages
+
+yum list installed  ----> show all the installed packages
+
+yum list installed | wc -l      ----> will display the count of installed packages
+
+yum list all  ----> it will show all the availabe packages through this repos 
+
+yum list all | wc -l   ---->it will show all the availabe packages  count 
+
+yum update -y ----> update all the packages 
+
+yum list available   -----> all-installed 
+
+yum list available | wc -l  ----> will show count of all-installed packages 
+
+yum remove nginx  ----> will remove the nginx package 
+
