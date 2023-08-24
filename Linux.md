@@ -318,7 +318,91 @@ ctrl+r : Type to bring up a recent command
 exit : Logout the current session 
 
 # User management#
-useradd <username>  ---->
+useradd <username>  ----> to add new user 
+ex: useradd ram
+ 
+passwd <username>  ----> to setup password for the new user
+
+ex: passwd ram 
+
+id username   ----> command to read the user information
+
+ex: id ram
+
+id : command will give you  current user information , if it is root user id is always "0" 
+normal user id is anything except "0"
+
+when ever a user is created, by default a group on the same user name will be created 
+
+every user have 2 groups
+  1. primary group
+  2. secondary group
+
+vim /etc/passwd   ----> command for view the user info
+
+ex: ram:x :1001:1001:: /home/ram: /bin/bash 
+
+ram is username , 1001 - user ID , 1001 - group ID , /home/ram - default home directory, /bin/bash - default shell terminal 
+
+getent passwd ----> it will display the passwd file 
+
+##group info ##
+
+groupadd <group-name> 
+
+ex: groupadd devops   
+
+getent group ----> command will give you the list of groups 
+
+usermod -g <group-name> <user-name>  ----> primary group to add user to the group 
+
+ex: usermod -g devops ram
+
+usermod -a -G devops ram 
+
+-a append 
+-G group 
+
+now user have one primary and one secondary group wich is devops
+
+# How to remove user from Group #
+
+gpasswd -d <username> <groupname>   
+
+ex: gpasswd -d ram devops
+
+-d : delete 
+
+# how to delete groups #
+
+groupdel usergroupname 
+
+ex: groupdel devops
+
+# how to remove user from group #
+gpasswd -d <username> <groupname>
+
+ex: gpasswd -d ram devops
+
+if user exit oranization first remove from primary and secondary groups 
+
+gpasswd -d <user-name> <group-name>
+
+if above command not working add him to the default group and then delete from the group
+
+usermod -g <username> <user-groupname>   (user will be deleted from all the groups)
+
+userdel <username> 
+ex: userdel ram
+
+groupdel <groupname>
+
+ex: groupdel devops
+
+
+
+
+
 
 # Package Management #
 yum ----> yellow dog utility manager  or Yellowdog Updater, Modified (yum Package)
