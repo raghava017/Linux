@@ -375,3 +375,15 @@ yum list available   -----> all-installed
 yum list available | wc -l  ----> will show count of all-installed packages 
 
 yum remove nginx  ----> will remove the nginx package 
+
+==========================
+cut command 
+
+TARFILE=https://dlcdn.apache.org/tomcat/tomcat-8/v8.5.92/bin/apache-tomcat-8.5.92.tar.gz
+
+echo $TARFILE | cut -d "/" -f1
+
+========================
+awk command 
+
+awk --help
